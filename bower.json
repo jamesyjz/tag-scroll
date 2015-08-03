@@ -1,0 +1,18 @@
+{
+  "name": "heineken_arena_pc",
+  "version": "1.0.0",
+  "authors": [
+    "Eric Lee <eric.lee@razorfish.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
