@@ -1,1 +1,28 @@
 @import "compass/reset";
+
+#container{
+  width: 100%;
+  overflow: hidden;
+  .content{
+    width: 100%;
+    overflow-y: scroll;
+    .tg__wrap{
+      width: 100%;
+      position: relative;
+      .gonext{
+        width: 17px;
+        height: 21px;
+        position: absolute;
+        left: 5%;
+        bottom: 10%;
+      }
+      &.tg_item2{
+
+      }
+    }
+  }
+  img{
+    display: block;
+    width: 100%;
+  }
+}
