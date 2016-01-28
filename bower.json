@@ -12,6 +12,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "zepto": "^1.1.6"
   }
 }

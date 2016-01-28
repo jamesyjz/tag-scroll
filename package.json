@@ -9,7 +9,7 @@
   "author": "Eric Lee <eric.lee@razorfish.com>",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.8.0",
+    "browser-sync": "^2.11.1",
     "gulp": "^3.9.0"
   }
 }
