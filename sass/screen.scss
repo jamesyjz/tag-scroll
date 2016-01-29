@@ -236,21 +236,24 @@ html{
   opacity: 0;
   @include transform(translateY(10px));
 }
+.sun-img,.watch,.football{
+  @include transition(transform 0.5s,opacity 0.5s);
+}
+.sun-title{
+  @include transition(transform 0.5s 0.2s,opacity 0.5s 0.2s);
+}
 
 .animated{
   .sun-img{
     opacity: 1;
     @include transform(translateY(-10px));
-    @include transition(transform 1s,opacity 1s);
   }
   .sun-title{
     opacity: 1;
     @include transform(translateY(-10px));
-    @include transition(transform 1s 0.2s,opacity 1s 0.2s);
   }
   &.watch,&.football{
     opacity: 1;
     @include transform(translateY(-10px));
-    @include transition(transform 1s,opacity 1s);
   }
 }

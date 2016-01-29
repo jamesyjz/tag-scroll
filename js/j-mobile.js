@@ -43,20 +43,20 @@ $(document).ready(function(){
             arr.push($('.tg_item2 li')[i].offsetTop+$('.tg_item2').offset().top);
         }
         
-        var startPoint = window.innerHeight/2;
+        var startPoint = window.innerHeight*2/3;
         $(window).on('scroll', function(e){
 
             //for list animate of tg_item2
-            if($(window).scrollTop()>arr[0]-startPoint && $(window).scrollTop()<arr[3]-startPoint+100){
+            if($(window).scrollTop()>$('.tg_item2').offset().top-startPoint && $(window).scrollTop()<$('.tg_item3').offset().top-startPoint){
 
                 for(var j=0;j<arr.length;j++){
                     if($(window).scrollTop()>arr[j]-startPoint){
                         $('.tg_item2 li').eq(j).addClass('animated');
                     }
                 }
-            }else if($(window).scrollTop()>$('.watch').offset().top-startPoint && $(window).scrollTop()<$('.watch').offset().top-startPoint+100){
+            }else if($(window).scrollTop()>$('.tg_item5').offset().top-startPoint &&  $(window).scrollTop()<$('.tg_item5').offset().top-startPoint+$('.tg_item5').height()/2 && !$('.watch').hasClass('animated')){
                 $('.watch').addClass('animated');
-            }else if($(window).scrollTop()>$('.football').offset().top-startPoint && $(window).scrollTop()<$('.football').offset().top-startPoint+100){
+            }else if($(window).scrollTop()>$('.tg_item5').offset().top-startPoint+$('.tg_item5').height()/2 && !$('.football').hasClass('animated')){
                 $('.football').addClass('animated');
             };
 
