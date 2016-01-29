@@ -48,7 +48,7 @@ $(document).ready(function(){
         var aaa = 1;
         $(window).on('touchmove', function(event){
             //event.preventDefault();
-            $('#json').html(aaa++);
+            //$('#json').html(aaa++);
             //for list animate of tg_item2
             if($(window).scrollTop()>$('.tg_item2').offset().top-startPoint && $(window).scrollTop()<$('.tg_item3').offset().top-startPoint){
 
