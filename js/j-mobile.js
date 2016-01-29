@@ -39,17 +39,27 @@ $(document).ready(function(){
 
     window.onload = function(){
         var arr = [];
-        for(var i=0;i<$('.tg__wrap').length;i++){
-            arr.push($('.tg__wrap')[i].offsetTop);
+        for(var i=0;i<$('.tg_item2 li').length;i++){
+            arr.push($('.tg_item2 li')[i].offsetTop+$('.tg_item2').offset().top);
         }
-        console.log(arr)
+        
+        var startPoint = window.innerHeight/2;
         $(window).on('scroll', function(e){
 
-            for(var j=0;j<arr.length;j++){
-                if($(window).scrollTop()>arr[j]){
-                    $('.tg__wrap').removeClass('actived').eq(j).addClass('actived');
+            //for list animate of tg_item2
+            if($(window).scrollTop()>arr[0]-startPoint && $(window).scrollTop()<arr[3]-startPoint+100){
+
+                for(var j=0;j<arr.length;j++){
+                    if($(window).scrollTop()>arr[j]-startPoint){
+                        $('.tg_item2 li').eq(j).addClass('animated');
+                    }
                 }
-            }
+            }else if($(window).scrollTop()>$('.watch').offset().top-startPoint && $(window).scrollTop()<$('.watch').offset().top-startPoint+100){
+                $('.watch').addClass('animated');
+            }else if($(window).scrollTop()>$('.football').offset().top-startPoint && $(window).scrollTop()<$('.football').offset().top-startPoint+100){
+                $('.football').addClass('animated');
+            };
+
 
         });
     };
