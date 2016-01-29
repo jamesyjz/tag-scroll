@@ -13,11 +13,26 @@
       width: 100%;
       position: relative;
       .gonext{
-        width: 17px;
-        height: 21px;
+        width: 0px;
+        height: 0px;
         position: absolute;
         left: 5%;
         bottom: 10%;
+        //@include size(0.2rem);
+        border-left: 0.25rem solid transparent;
+        border-right: 0.25rem solid transparent;
+        border-top: 0.3rem solid #fff;
+        &:after{
+          content: '';
+          display: block;
+          border-left: 0.25rem solid transparent;
+          border-right: 0.25rem solid transparent;
+          border-top: 0.3rem solid #fff;
+          left: 0;
+          @include transform(translate(-50%));
+          position: absolute;
+          top: 0rem;
+        }
       }
       &.tg_item2{
         width: 100%;
