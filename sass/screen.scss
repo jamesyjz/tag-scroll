@@ -111,6 +111,19 @@ html{
   background: #000;
   height: 10.31rem;
   margin-top: -2px;
+  .thanks{
+    display: none;
+    width: 7.74rem;
+    margin: 0 auto;
+  }
+  &.done{
+    #form-address{
+      display: none;
+    }
+    .thanks{
+      display: block;
+    }
+  }
 }
 #form-address{
   position: absolute;
@@ -216,6 +229,14 @@ html{
 .btn-submit{
   @include size(8.71rem,1.62rem);
   margin-top: 0.5rem;
+}
+
+.show{
+  display: block !important;
+}
+
+.hide{
+  display: hidden !important;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

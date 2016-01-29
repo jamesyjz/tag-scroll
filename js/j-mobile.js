@@ -4,6 +4,7 @@
 //wayppoint
 $(document).ready(function(){
     //select the region
+
     var province='';
     for(var i=0;i<region.length;i++){
         province = province+'<option name="'+region[i].name+'">'+region[i].name+'</option>'
@@ -43,9 +44,11 @@ $(document).ready(function(){
             arr.push($('.tg_item2 li')[i].offsetTop+$('.tg_item2').offset().top);
         }
         
-        var startPoint = window.innerHeight*2/3;
-        $(window).on('scroll', function(e){
-
+        var startPoint = window.innerHeight*4/5;
+        var aaa = 1;
+        $(window).on('touchmove', function(event){
+            //event.preventDefault();
+            $('#json').html(aaa++);
             //for list animate of tg_item2
             if($(window).scrollTop()>$('.tg_item2').offset().top-startPoint && $(window).scrollTop()<$('.tg_item3').offset().top-startPoint){
 
@@ -65,13 +68,17 @@ $(document).ready(function(){
     };
 
     $('.btn-submit').on('click', function(){
-
-        if(Common.formAddress()){
+        var enableClick = true;
+        if(true){
+        //if(Common.formAddress()){
             if(!enableClick) return;
             enableClick = false;
-            var name = $('.input-name').val(),
-                mobile = $('.input-phone').val(),
-                address = $('.input-address').val();
+            var inputname = $('.input-name').val(),
+                inputmobile = $('.input-phone').val(),
+                inputprovince = $('.input-province').val(),
+                inputcity = $('.input-city').val();
+            $('.tg_item6').addClass('done');
+            console.log(inputname+'inputmobile'+inputmobile+'inputprovince'+inputprovince+'inputcity'+inputcity);
             //    true
             //service.formFinish({
             //    name:name,

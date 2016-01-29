@@ -15,7 +15,12 @@
     <script type="text/javascript" src="/js/j-mobile.js"></script>
 </head>
 <body>
-<pre id="json"></pre>
+<div id="json" style="position: fixed;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    background: red;"></div>
 <div id="container">
     <div class="content">
         <section class="tg__wrap tg_item1">
@@ -97,13 +102,13 @@
                         <option selected disabled value="">城市</option>
                     </select>
                 </div>
-                <!--<div class="input-box input-box-city">-->
-
-                <!--</div>-->
                 <div class="btn-submit">
                     <img src="/img/btn-submit.png" alt=""/>
                 </div>
             </form>
+            <div class="thanks">
+                <img src="/img/thanks.png" alt=""/>
+            </div>
         </section>
     </div>
 </div>
