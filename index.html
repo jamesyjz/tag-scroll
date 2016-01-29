@@ -9,9 +9,13 @@
     <meta content="telephone=no" name="format-detection" />
     <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/lib/zepto/zepto.min.js"></script>
+    <script type="text/javascript" src="/js/rem.js"></script>
+    <script type="text/javascript" src="/js/region.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
     <script type="text/javascript" src="/js/j-mobile.js"></script>
 </head>
 <body>
+<pre id="json"></pre>
 <div id="container">
     <div class="content">
         <section class="tg__wrap tg_item1">
@@ -21,7 +25,6 @@
             </div>
         </section>
         <section class="tg__wrap tg_item2">
-            <img src="/img/img-2.jpg" alt="">
             <ul>
                 <li>
                     <div class="sun-img">
@@ -74,7 +77,33 @@
             </div>
         </section>
         <section class="tg__wrap tg_item6">
-            <img src="/img/img-6.jpg" alt="">
+            <!--<img src="/img/img-6.jpg" alt="">-->
+            <form action="post" class="fillform" id="form-address">
+                <div class="input-box input-box-name">
+                    <label for="name"></label>
+                    <input type="text" name="name" class="input-name" placeholder="输入姓名"/>
+                </div>
+                <div class="input-box input-box-phone">
+                    <label for="phone"></label>
+                    <input type="number" name="phone" class="input-phone" placeholder="输入联系方式"/>
+                </div>
+                <div class="input-box input-box-province">
+                    <label for="province"></label>
+                    <select name="province" class="input-province">
+                        <option value="">省份</option>
+                    </select>
+                    <label for="city" class="label-city"></label>
+                    <select name="city" class="input-city">
+                        <option selected disabled value="">城市</option>
+                    </select>
+                </div>
+                <!--<div class="input-box input-box-city">-->
+
+                <!--</div>-->
+                <div class="btn-submit">
+                    <img src="/img/btn-submit.png" alt=""/>
+                </div>
+            </form>
         </section>
     </div>
 </div>

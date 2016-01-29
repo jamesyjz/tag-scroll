@@ -68,3 +68,165 @@
     width: 100%;
   }
 }
+
+//for tg_item2
+.tg_item2{
+  height: 19.38rem;
+}
+
+//for tg_item3
+.tg_item3{
+  height: 27.89rem;
+}
+
+//for tg_item4
+.tg_item4{
+  height: 12.28rem;
+}
+
+//for tg_item5
+.tg_item5{
+  height: 30.39rem;
+  .watch{
+    position: absolute;
+    top: 5%;
+    left: 0;
+    z-index: 2;
+    width: percentage(594px/1080px);
+  }
+  .football{
+    position: absolute;
+    bottom: 25%;
+    right: 0;
+    width: percentage(1008px/1080px);
+  }
+}
+
+
+//for form
+html{
+  font-size: 50px;
+}
+.tg_item6{
+  background: #000;
+  height: 10.31rem;
+  margin-top: -2px;
+}
+#form-address{
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  @include transform(translate(-50%));
+  width: percentage(860px/1080px);
+}
+.input-box{
+  padding-bottom: 0.6rem;
+  position: relative;
+  .error{
+    position: absolute;
+    bottom: 0.1rem;
+    color: rgba(252,80,90,0.6);
+    font-size: 0.34rem;
+  }
+  input[type="text"],input[type="number"],select{
+    font-size: 0.44rem;
+    color: #fff;
+    border: #e6e6e6 1px solid;
+    padding: 0.3rem;
+    background: transparent;
+    -webkit-appearance: none;
+    @include vendor-prefix(border-radius,0);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    text-indent: 1rem;
+
+  }
+  select{
+    color: rgba(255,255,255,0.3);
+    &.hasvalue{
+      color: #fff;
+    }
+    &.input-province{
+      float: left;
+      width: 46%;
+    }
+    &.input-city{
+      float: right;
+      width: 46%;
+    }
+
+  }
+  label{
+    position: absolute;
+    @include size(0.53rem,0.53rem);
+    background: url("../img/icon-sprite.png") no-repeat;
+    background-size: 100%;
+    top: 0.4rem;
+    left:0.4rem;
+  }
+  &.input-box-name{
+    label{
+      background-position: 0% 0%;
+    }
+  }
+  &.input-box-phone{
+    label{
+      background-position: 0% 50%;
+    }
+  }
+  &.input-box-province{
+    clear: both;
+    label{
+      //top: 0.3rem;
+      background-position: 0% 100%;
+      &:after{
+        content: '';
+        display: block;
+        @include size(0rem,0rem);
+        position: absolute;
+        right: -2.7rem;
+        top: 0.2rem;
+        border-left: 0.15rem solid transparent;
+        border-right: 0.15rem solid transparent;
+        border-top: 0.2rem solid #fff;
+      }
+    }
+    .label-city{
+      left: auto;
+      right: 36%;
+    }
+    &:after{
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      clear: both;
+    }
+  }
+  &.input-box-city{
+    //width: 46%;
+    //float: right;
+    label{
+      background-position: 0% 100%;
+    }
+  }
+}
+
+.btn-submit{
+  @include size(8.71rem,1.62rem);
+  margin-top: 0.5rem;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255,255,255,0.3);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(255,255,255,0.3);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(255,255,255,0.3);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255,255,255,0.3);
+}
