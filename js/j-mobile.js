@@ -69,8 +69,7 @@ $(document).ready(function(){
 
     $('.btn-submit').on('click', function(){
         var enableClick = true;
-        if(true){
-        //if(Common.formAddress()){
+        if(Common.formAddress()){
             if(!enableClick) return;
             enableClick = false;
             var inputname = $('.input-name').val(),
@@ -78,7 +77,7 @@ $(document).ready(function(){
                 inputprovince = $('.input-province').val(),
                 inputcity = $('.input-city').val();
             $('.tg_item6').addClass('done');
-            console.log(inputname+'inputmobile'+inputmobile+'inputprovince'+inputprovince+'inputcity'+inputcity);
+            //console.log(inputname+'inputmobile'+inputmobile+'inputprovince'+inputprovince+'inputcity'+inputcity);
             //    true
             //service.formFinish({
             //    name:name,
