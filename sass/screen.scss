@@ -13,17 +13,16 @@
       width: 100%;
       position: relative;
       .gonext{
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        left: 5%;
-        bottom: 10%;
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        @include size(10px,10px);
         &:after{
           content: '';
           display: block;
           border-left: 0.25rem solid transparent;
           border-right: 0.25rem solid transparent;
-          border-top: 0.3rem solid #fff;
+          border-top: 0.3rem solid #000;
           left: 0;
           @include transform(translate(-50%));
           position: absolute;
@@ -35,7 +34,7 @@
           display: block;
           border-left: 0.25rem solid transparent;
           border-right: 0.25rem solid transparent;
-          border-top: 0.3rem solid #fff;
+          border-top: 0.3rem solid #000;
           left: 0;
           @include transform(translate(-50%));
           position: absolute;
@@ -299,7 +298,7 @@ html{
 //for animation
 .sun-img,.sun-title,.watch,.football{
   opacity: 0;
-  @include transform(translateY(100px));
+  @include transform(translateY(50px));
 }
 .sun-img,.watch,.football{
   @include transition(transform 0.5s,opacity 0.5s);
