@@ -56,7 +56,7 @@ $(document).ready(function(){
             }
 
             if($(window).scrollTop()>$('.tg_item2').offset().top-startPoint){
-                for(var j=0;j<arr.length;j++){
+                for(var j=1;j<arr.length;j++){
                     if($(window).scrollTop()>arr[j]-startPoint && !$('.tg_item2 li').eq(j).hasClass('animated')){
                         $('.tg_item2 li').eq(j).addClass('animated');
                     }
