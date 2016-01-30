@@ -45,23 +45,25 @@ $(document).ready(function(){
         }
         
         var startPoint = window.innerHeight*4/5;
-        var aaa = 1;
         $(window).on('scroll', function(event){
             //event.preventDefault();
             //$('#json').html(aaa++);
             //for list animate of tg_item2
-            if($(window).scrollTop()>$('.tg_item2').offset().top-startPoint && $(window).scrollTop()<$('.tg_item3').offset().top-startPoint){
-
+            if($(window).scrollTop()>$('.tg_item2').offset().top-startPoint){
                 for(var j=0;j<arr.length;j++){
-                    if($(window).scrollTop()>arr[j]-startPoint){
+                    if($(window).scrollTop()>arr[j]-startPoint && !$('.tg_item2 li').eq(j).hasClass('animated')){
                         $('.tg_item2 li').eq(j).addClass('animated');
                     }
                 }
-            }else if($(window).scrollTop()>$('.tg_item5').offset().top-startPoint &&  $(window).scrollTop()<$('.tg_item5').offset().top-startPoint+$('.tg_item5').height()/2 && !$('.watch').hasClass('animated')){
+            }
+
+            if($(window).scrollTop()>$('.tg_item5').offset().top-startPoint && !$('.watch').hasClass('animated')){
                 $('.watch').addClass('animated');
-            }else if($(window).scrollTop()>$('.tg_item5').offset().top-startPoint+$('.tg_item5').height()/2 && !$('.football').hasClass('animated')){
+            }
+
+            if($(window).scrollTop()>$('.tg_item5').offset().top-startPoint+$('.tg_item5').height()/2 && !$('.football').hasClass('animated')){
                 $('.football').addClass('animated');
-            };
+            }
 
 
         });

@@ -13,15 +13,11 @@
       width: 100%;
       position: relative;
       .gonext{
-        width: 0px;
-        height: 0px;
+        width: 10px;
+        height: 10px;
         position: absolute;
         left: 5%;
         bottom: 10%;
-        //@include size(0.2rem);
-        border-left: 0.25rem solid transparent;
-        border-right: 0.25rem solid transparent;
-        border-top: 0.3rem solid #fff;
         &:after{
           content: '';
           display: block;
@@ -32,7 +28,29 @@
           @include transform(translate(-50%));
           position: absolute;
           top: 0rem;
+          @include animation(arrowtop 1s 0.5s infinite);
         }
+        &:before{
+          content: '';
+          display: block;
+          border-left: 0.25rem solid transparent;
+          border-right: 0.25rem solid transparent;
+          border-top: 0.3rem solid #fff;
+          left: 0;
+          @include transform(translate(-50%));
+          position: absolute;
+          top: 0.3rem;
+          @include animation(arrowtop 1s infinite);
+        }
+        @keyframes arrowtop {
+          0%{
+            opacity: 1;
+          }
+          50%{
+            opacity: 0.5;
+          }
+        }
+        
       }
       &.tg_item2{
         width: 100%;
@@ -127,16 +145,27 @@ html{
   height: 10.31rem;
   margin-top: -2px;
   .thanks{
-    display: none;
+    position: relative;
+    z-index: -1;
+    opacity: 0;
     width: 7.74rem;
     margin: 0 auto;
+    @include transition(opacity 1s);
+  }
+  #form-address{
+    z-index: 2;
+    @include transition(opacity 1s);
   }
   &.done{
     #form-address{
-      display: none;
+      //display: none;
+      opacity: 0;
+      z-index: -2;
     }
     .thanks{
+      opacity: 1;
       display: block;
+      z-index: 2;
     }
   }
 }
@@ -270,7 +299,7 @@ html{
 //for animation
 .sun-img,.sun-title,.watch,.football{
   opacity: 0;
-  @include transform(translateY(10px));
+  @include transform(translateY(100px));
 }
 .sun-img,.watch,.football{
   @include transition(transform 0.5s,opacity 0.5s);

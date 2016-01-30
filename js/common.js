@@ -44,8 +44,8 @@
                 Common.errorMsg.add($('.input-phone').parent(),'联系方式填写错误');
                 validate = false;
             }else{
-                var reg=/^1\d{10}$/;
-                if(!(reg.test($('.input-phone').val()))){
+                var reg=/^\d/;
+                if(!(reg.test($('.input-phone').val()) && $('.input-phone').val().length>2)){
                     validate = false;
                     Common.errorMsg.add($('.input-phone').parent(),'手机号格式错误，请重新输入');
                 }else{
