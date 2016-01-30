@@ -46,7 +46,7 @@ $(document).ready(function(){
         
         var startPoint = window.innerHeight*4/5;
         var aaa = 1;
-        $(window).on('touchmove', function(event){
+        $(window).on('scroll', function(event){
             //event.preventDefault();
             //$('#json').html(aaa++);
             //for list animate of tg_item2
